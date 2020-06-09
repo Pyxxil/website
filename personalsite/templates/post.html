@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block content %} {% load martortags %}
+
+<div class="content">
+  <div class="blog-post">
+    {{ post.body|safe_markdown }}
+  </div>
+</div>
+
+{% endblock %}

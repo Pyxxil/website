@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    {% block title %}
+    <title>Pyxxilated Studios</title>
+    {% endblock %}
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Add additional CSS in static file -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+      integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="menu">
+      <div class="pure-menu pure-menu-horizontal">
+        <a class="pure-menu-heading pure-menu-link" href="/"
+          >Pyxxilated Studios</a
+        >
+        <ul class="pure-menu-list">
+          <li class="pure-menu-item menu-item-divided">
+            <a class="pure-menu-link" href="/blog">Blog</a>
+          </li>
+        </ul>
+
+        <ul class="pure-menu right-menu">
+          <li class="pure-menu-item">
+            <a href="https://www.github.com/pyxxil"
+              ><img
+                class="menu-image"
+                src="{% static 'images/GitHub-light.png' %}"
+            /></a>
+          </li>
+          <li class="pure-menu-item">
+            <a href="https://www.gitlab.com/pyxxil"
+              ><img class="menu-image" src="{% static 'images/GitLab.png' %}"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    {% block content %}{% endblock %}
+  </body>
+</html>

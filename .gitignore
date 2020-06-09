@@ -3,5 +3,7 @@ manage.py
 
 env/
 __pycache__/
+.vscode/
 
 personalsite/settings.py
+posting/
