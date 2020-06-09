@@ -1,12 +1,12 @@
 :root {
-  --primary: #dddbf1;
-  --secondary: #8693ab;
+  --primary: #ab8476;
+  --secondary: #96705b;
 
-  --background-colour: #283044;
-  --secondary-background-colour: var(--secondary);
+  --background-colour: #1a1423;
+  --secondary-background-colour: #3d314a;
   --text: var(--primary);
-  --secondary-text: #d1beb0;
-  --dark-gray: #1c1d21;
+  --secondary-text: var(--secondary);
+  --extra: #23001e;
 }
 
 body {
@@ -45,9 +45,9 @@ body {
 
 .menu {
   width: 100%;
-  -webkit-box-shadow: 0px 0px 10px 2px var(--dark-gray);
-  -moz-box-shadow: 0px 0px 10px 2px var(--dark-gray);
-  box-shadow: 0px 0px 10px 2px var(--dark-gray);
+  -webkit-box-shadow: 0px 0px 6px 2px var(--extra);
+  -moz-box-shadow: 0px 0px 6px 2px var(--extra);
+  box-shadow: 0px 0px 6px 2px var(--extra);
 
   background-color: var(--background-colour);
 }
@@ -83,9 +83,9 @@ body {
   font-size: 14px;
   line-height: normal;
 
-  -webkit-box-shadow: 0px 0px 10px 2px var(--dark-gray);
-  -moz-box-shadow: 0px 0px 10px 2px var(--dark-gray);
-  box-shadow: 0px 0px 10px 2px var(--dark-gray);
+  -webkit-box-shadow: 0px 0px 6px 2px var(--extra);
+  -moz-box-shadow: 0px 0px 6px 2px var(--extra);
+  box-shadow: 0px 0px 6px 2px var(--extra);
 
   -moz-border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
@@ -125,6 +125,8 @@ body {
   padding-bottom: 1em;
   border-bottom: 2px solid var(--text);
   margin-bottom: 1em;
+
+  color: var(--secondary-text);
 }
 
 .blog-post p {
