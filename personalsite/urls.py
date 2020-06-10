@@ -26,7 +26,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('blog/', views.blog, name='blog'),
-    path('blog/<int:id>', views.post, name="post"),
+    path('blog/<int:id>', views.post, name='post'),
+    path('about', views.about, name='about'),
     path('martor/', include('martor.urls'))
 ]
 
