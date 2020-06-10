@@ -11,7 +11,28 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <!-- Add additional CSS in static file -->
+
     {% load static %}
+
+    <style>
+      @font-face {
+        font-family: Roboto;
+        src: url("{% static 'admin/fonts/Roboto-Regular-webfont.woff' %}");
+      }
+
+      @font-face {
+        font-family: Roboto;
+        font-weight: bold;
+        src: url("{% static 'admin/fonts/Roboto-Bold-webfont.woff' %}");
+      }
+
+      @font-face {
+        font-family: Roboto;
+        font-weight: lighter;
+        src: url("{% static 'admin/fonts/Roboto-Light-webfont.woff' %}");
+      }
+    </style>
+
     <link rel="stylesheet" href="{% static 'css/code.css' %}" />
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
     <link
