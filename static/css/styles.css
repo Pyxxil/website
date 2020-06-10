@@ -118,14 +118,25 @@ body {
   transform: rotate(-45deg);
 }
 
+.centered {
+  text-align: center;
+}
+
+#menu .pure-menu-link:hover,
+#menu .pure-menu-link:focus {
+  background-color: var(--secondary-background-colour);
+  color: var(--secondary);
+}
+
 @media (max-width: 47.999em) {
   .pure-menu {
     border-bottom: 2px solid var(--background-colour);
+    text-align: left;
   }
 
   .custom-menu-3 {
-    text-align: left;
     margin-left: 1em;
+    text-align: center;
   }
 
   .custom-toggle {
