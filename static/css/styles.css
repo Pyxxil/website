@@ -48,6 +48,10 @@ body {
   background-size: 64px 128px;
 }
 
+.codehilite {
+  background: none !important;
+}
+
 .custom-wrapper {
   background-color: var(--text);
   margin-bottom: 1em;
