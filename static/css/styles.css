@@ -50,6 +50,7 @@ body {
 
 .codehilite {
   background: none !important;
+  overflow-x: auto;
 }
 
 .custom-wrapper {
