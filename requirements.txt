@@ -11,6 +11,7 @@ Markdown==3.2.2
 martor==1.4.9
 mccabe==0.6.1
 pycodestyle==2.6.0
+Pygments==2.6.1
 pylint==2.5.3
 pytz==2020.1
 requests==2.23.0
