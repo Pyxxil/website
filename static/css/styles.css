@@ -1,7 +1,6 @@
 :root {
   --primary: #ab8476;
   --secondary: #96705b;
-
   --background-colour: #1a1423;
   --secondary-background-colour: #3d314a;
   --text: var(--primary);
@@ -9,13 +8,19 @@
   --extra: #23001e;
 }
 
+html,
+button,
+input,
+select,
+textarea,
+.pure-g [class*="pure-u"] {
+  /* Set your content font stack here: */
+  font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif !important;
+}
+
 body {
-  font-size: 16px;
   line-height: 1.5em;
-
-  /* background-color: var(--secondary-background-colour); */
   color: var(--text);
-
   background: linear-gradient(
       135deg,
       var(--secondary-background-colour) 21px,
@@ -43,23 +48,95 @@ body {
   background-size: 64px 128px;
 }
 
-.menu {
-  width: 100%;
-  -webkit-box-shadow: 0px 0px 6px 2px var(--extra);
-  -moz-box-shadow: 0px 0px 6px 2px var(--extra);
-  box-shadow: 0px 0px 6px 2px var(--extra);
+.custom-wrapper {
+  background-color: var(--text);
+  margin-bottom: 1em;
+  -webkit-font-smoothing: antialiased;
+  height: 2.5em;
+  overflow: hidden;
+  -webkit-transition: height 0.5s;
+  -moz-transition: height 0.5s;
+  -ms-transition: height 0.5s;
+  transition: height 0.5s;
+}
 
+.custom-wrapper .pure-menu-link,
+.custom-wrapper .pure-menu-heading {
+  color: var(--background-colour);
+}
+
+.custom-wrapper.open {
+  height: 10em;
+}
+
+.custom-menu-3 {
+  text-align: right;
+}
+
+.custom-toggle {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+.custom-toggle .bar {
   background-color: var(--background-colour);
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 100px;
+  position: absolute;
+  top: 18px;
+  right: 7px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-.right-menu {
-  display: flex;
-  float: right;
-  margin-top: 0;
+.custom-toggle .bar:first-child {
+  -webkit-transform: translateY(-6px);
+  -moz-transform: translateY(-6px);
+  -ms-transform: translateY(-6px);
+  transform: translateY(-6px);
 }
 
-.menu-item-divided {
-  border-left: 1px solid var(--text);
+.custom-toggle.x .bar {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.custom-toggle.x .bar:first-child {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 47.999em) {
+  .pure-menu {
+    border-bottom: 2px solid var(--background-colour);
+  }
+
+  .custom-menu-3 {
+    text-align: left;
+    margin-left: 1em;
+  }
+
+  .custom-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 567px) {
+  .pure-g {
+    letter-spacing: normal !important;
+  }
 }
 
 .menu-image {
@@ -69,67 +146,41 @@ body {
 
 .menu-image:hover {
   transform: scale(1.2);
+  border-bottom: medium var(--text);
 }
 
-.content {
-  margin: 2em auto;
-  padding: 1em 2em;
+.content-wrapper {
   z-index: 2;
-
   color: var(--secondary-text);
   background-color: var(--background-colour);
-
-  font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
-  font-size: 14px;
   line-height: normal;
-
-  -webkit-box-shadow: 0px 0px 6px 2px var(--extra);
-  -moz-box-shadow: 0px 0px 6px 2px var(--extra);
-  box-shadow: 0px 0px 6px 2px var(--extra);
-
   -moz-border-radius: 0.2em;
   -webkit-border-radius: 0.2em;
   border-radius: 0.2em;
 }
 
-@media (min-width: 576px) {
-  .content {
-    width: 520px;
-  }
-}
-
-@media (min-width: 768px) {
-  .content {
-    width: 700px;
-  }
-}
-
-@media (min-width: 992px) {
-  .content {
-    width: 920px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .content {
-    width: 1140px;
-  }
+.content {
+  padding: 1em 2em;
 }
 
 .content a {
   color: var(--secondary);
 }
 
-.blog-post h1 {
+h1 {
   text-align: center;
   padding-bottom: 1em;
   border-bottom: 2px solid var(--text);
   margin-bottom: 1em;
-
   color: var(--secondary-text);
 }
 
 .blog-post p {
   text-align: justify;
-  font-family: sans-serif;
+}
+
+.shadow {
+  -webkit-box-shadow: 0 0 6px 2px var(--extra);
+  -moz-box-shadow: 0 0 6px 2px var(--extra);
+  box-shadow: 0 0 6px 2px var(--extra);
 }

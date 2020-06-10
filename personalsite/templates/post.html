@@ -1,9 +1,15 @@
 {% extends "base.html" %} {% block content %} {% load martortags %}
 
-<div class="content">
-  <div class="blog-post">
-    {{ post.body|safe_markdown }}
+<div class="pure-g">
+  <div class="pure-u-md-1-24"></div>
+  <div class="pure-u-md-22-24 pure-u-sm-1 content-wrapper shadow">
+    <div class="content blog-post">
+      {{ post.body|safe_markdown }}
+    </div>
   </div>
+  <div class="pure-u-md-1-24"></div>
 </div>
+
+<div style="margin: 1em;"></div>
 
 {% endblock %}
