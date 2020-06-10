@@ -128,7 +128,9 @@ body {
 }
 
 #menu .pure-menu-link:hover,
-#menu .pure-menu-link:focus {
+#menu .pure-menu-link:focus,
+#menu .pure-menu-heading:hover,
+#menu .pure-menu-heading:focus {
   background-color: var(--secondary-background-colour);
   color: var(--secondary);
 }
