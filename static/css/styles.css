@@ -18,6 +18,10 @@ textarea,
   font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif !important;
 }
 
+.codehilite code {
+  font-family: "Roboto Mono", monospace;
+}
+
 body {
   line-height: 1.5em;
   color: var(--text);
