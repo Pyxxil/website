@@ -28,6 +28,7 @@ urlpatterns = [
     path('blog/', views.blog, name='blog'),
     path('blog/<int:id>', views.post, name='post'),
     path('about', views.about, name='about'),
+    path('projects', views.projects, name='projects'),
     path('martor/', include('martor.urls'))
 ]
 

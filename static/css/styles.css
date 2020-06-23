@@ -177,9 +177,6 @@ body {
   color: var(--text);
   background-color: var(--background-colour);
   line-height: normal;
-  -moz-border-radius: 0.2em;
-  -webkit-border-radius: 0.2em;
-  border-radius: 0.2em;
 }
 
 .content {
@@ -188,6 +185,12 @@ body {
 
 .content a {
   color: var(--secondary);
+}
+
+.content li {
+  padding: 1em;
+  display: block;
+  background-color: var(--secondary-background-colour);
 }
 
 .content blockquote {
@@ -215,4 +218,11 @@ h4 {
   -webkit-box-shadow: 0 0 6px 2px var(--extra);
   -moz-box-shadow: 0 0 6px 2px var(--extra);
   box-shadow: 0 0 6px 2px var(--extra);
+}
+
+.bordered {
+  border: 1px solid;
+  -moz-border-radius: 0.2em;
+  -webkit-border-radius: 0.2em;
+  border-radius: 0.2em;
 }

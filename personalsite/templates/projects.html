@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block content %} {% load martortags %}
+
+<div class="content">
+  <h1>My projects</h1>
+
+  <ul style="padding: 0;">
+    {% for project in projects %}
+    <li class="bordered shadow">
+      <a href="{{ project.link }}"
+        ><h3 style="text-align: unset; padding: 0;">{{ project.title }}</h3></a
+      >
+      {{ project.description|safe_markdown }}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% endblock %}
