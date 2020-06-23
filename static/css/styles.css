@@ -60,7 +60,6 @@ body {
 
 .custom-wrapper {
   background-color: var(--text);
-  margin-bottom: 1em;
   -webkit-font-smoothing: antialiased;
   height: 2.5em;
   overflow: hidden;
