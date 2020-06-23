@@ -10,31 +10,36 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <meta name="description" content="A personal website for Pyxxil" />
     <!-- Add additional CSS in static file -->
 
     {% load static %}
 
     <style>
       @font-face {
-        font-family: Roboto;
+        font-family: "Roboto";
         src: url("{% static 'admin/fonts/Roboto-Regular-webfont.woff' %}");
+        font-display: swap;
       }
 
       @font-face {
-        font-family: Roboto;
+        font-family: "Roboto";
         font-weight: bold;
         src: url("{% static 'admin/fonts/Roboto-Bold-webfont.woff' %}");
+        font-display: swap;
       }
 
       @font-face {
-        font-family: Roboto;
+        font-family: "Roboto";
         font-weight: lighter;
         src: url("{% static 'admin/fonts/Roboto-Light-webfont.woff' %}");
+        font-display: swap;
       }
 
       @font-face {
         font-family: "Roboto Mono";
         src: url("{% static 'fonts/RobotoMono-Regular.ttf' %}");
+        font-display: swap;
       }
     </style>
 
@@ -82,19 +87,21 @@
         <div class="pure-menu pure-menu-horizontal custom-menu-3">
           <ul class="pure-menu-list">
             <li class="pure-menu-item">
-              <a href="https://www.github.com/pyxxil"
+              <a href="https://www.github.com/pyxxil" alt="Github"
                 ><img
                   class="menu-image"
                   src="{% static 'images/GitHub-light.png' %}"
               /></a>
             </li>
             <li class="pure-menu-item">
-              <a href="https://www.gitlab.com/pyxxil"
+              <a href="https://www.gitlab.com/pyxxil" alt="Gitlab"
                 ><img class="menu-image" src="{% static 'images/GitLab.png' %}"
               /></a>
             </li>
             <li class="pure-menu-item">
-              <a href="https://www.linkedin.com/in/josh-hill-b655131a1/"
+              <a
+                href="https://www.linkedin.com/in/josh-hill-b655131a1/"
+                alt="LinkedIn"
                 ><img
                   class="menu-image"
                   src="{% static 'images/LinkedIn.png' %}"

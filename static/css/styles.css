@@ -18,7 +18,8 @@ textarea,
   font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif !important;
 }
 
-.codehilite code {
+.codehilite code,
+.codehilite span {
   font-family: "Roboto Mono", monospace;
 }
 
@@ -187,6 +188,12 @@ body {
 
 .content a {
   color: var(--secondary);
+}
+
+.content blockquote {
+  color: var(--secondary);
+  font-style: italic;
+  text-align: center;
 }
 
 h1 {
