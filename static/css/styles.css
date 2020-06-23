@@ -186,7 +186,7 @@ body {
   color: var(--secondary);
 }
 
-.content li {
+.content ul > li {
   padding: 1em;
   display: block;
   background-color: var(--secondary-background-colour);
