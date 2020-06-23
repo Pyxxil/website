@@ -1,6 +1,6 @@
 :root {
-  --primary: #ab8476;
-  --secondary: #96705b;
+  --primary: #f0ad6d;
+  --secondary: #ffcd8b;
   --background-colour: #1a1423;
   --secondary-background-colour: #3d314a;
   --text: var(--primary);
@@ -174,7 +174,7 @@ body {
 
 .content-wrapper {
   z-index: 2;
-  color: var(--secondary-text);
+  color: var(--text);
   background-color: var(--background-colour);
   line-height: normal;
   -moz-border-radius: 0.2em;
