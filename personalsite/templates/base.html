@@ -44,18 +44,45 @@
       }
     </style>
 
-    <link rel="stylesheet" href="{% static 'css/code.css' %}" />
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+
+    <link
+      rel="stylesheet"
+      href="{% static 'css/code.css' %}"
+      media="none"
+      onload="if(media!='all')media='all'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="{% static 'css/code.css' %}"
+    /></noscript>
+
     <link
       rel="stylesheet"
       href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
       integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ"
       crossorigin="anonymous"
+      media="none"
+      onload="if(media!='all')media='all'"
     />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+        integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ"
+        crossorigin="anonymous"
+    /></noscript>
+
     <link
       rel="stylesheet"
       href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css"
+      media="none"
+      onload="if(media!='all')media='all'"
     />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css"
+    /></noscript>
 
     <link
       rel="apple-touch-icon"
@@ -84,7 +111,7 @@
           <a href="/" class="pure-menu-heading custom-brand"
             >Pyxxilated Studios</a
           >
-          <a href="#" class="custom-toggle" id="toggle"
+          <a href="#" aria-label="None" class="custom-toggle" id="toggle"
             ><s class="bar"></s><s class="bar"></s
           ></a>
         </div>
