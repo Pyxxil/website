@@ -191,6 +191,7 @@ body {
   padding: 1em;
   display: block;
   background-color: var(--secondary-background-colour);
+  margin: 1em 0;
 }
 
 .content blockquote {
@@ -215,9 +216,9 @@ h4 {
 }
 
 .shadow {
-  -webkit-box-shadow: 0 0 6px 2px var(--extra);
-  -moz-box-shadow: 0 0 6px 2px var(--extra);
-  box-shadow: 0 0 6px 2px var(--extra);
+  -webkit-box-shadow: 0px 3px 3px -2px var(--extra);
+  -moz-box-shadow: 0px 3px 3px -2px var(--extra);
+  box-shadow: 0px 3px 3px -2px var(--extra);
 }
 
 .bordered {
