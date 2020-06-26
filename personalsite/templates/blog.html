@@ -1,13 +1,18 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} {% block content %} {% load martortags %}
 
 <div class="content">
   <h1>Welcome to my blog!</h1>
 
   {% for post in page.object_list %}
-  <h5>
-    {{ post.date|date:"Y-m-d" }} -
-    <a href="/blog/{{ post.id }}">{{ post.title }}</a>
-  </h5>
+  <div class="blog-post" style="margin: 2em 0;">
+    <h3 style="margin-bottom: 0;">
+      <a href="/blog/{{ post.id }}">{{ post.title }}</a>
+    </h3>
+    <span style="font-style: italic;"
+      >Reading time (mins): {{ post.reading_time }}</span
+    >
+    {{ post.summary|safe_markdown }}
+  </div>
   {% endfor %} {% if page.has_previous %}
   <a
     href="/blog?page={{ page.previous_page_number }}"

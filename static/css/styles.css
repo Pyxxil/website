@@ -208,9 +208,9 @@ h1 {
   color: var(--secondary-text);
 }
 
-h2,
-h3,
-h4 {
+article h2,
+article h3,
+article h4 {
   text-align: center;
   padding: 0.5em;
 }

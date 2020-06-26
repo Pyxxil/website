@@ -1,6 +1,7 @@
 manage.py
 *.sqlite3
 
+.env
 env/
 __pycache__/
 .vscode/

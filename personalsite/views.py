@@ -2,6 +2,8 @@ from django.http import HttpResponse
 from django.template import loader
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+from .utils import read_time
+
 from .models import Post, Project
 
 
@@ -29,6 +31,7 @@ def post(request, id):
     template = loader.get_template("post.html")
 
     post = Post.objects.get(id=id)
+    print(read_time(post.body))
 
     return HttpResponse(template.render({"post": post}, request))
 
