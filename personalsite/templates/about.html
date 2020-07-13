@@ -2,6 +2,52 @@
 
 <div class="content">
   <h1>About me</h1>
+
+  {% load static %}
+
+  <img
+    src="{% static 'images/Rilee.png' %}"
+    alt="Rilee"
+    style="
+      border-radius: 1em;
+      width: 10em;
+      height: 10em;
+      float: left;
+      margin: 0 1em 1em 0;
+    "
+  />
+
+  <p>
+    As much as I would like to claim that the picture on the left is of me, I
+    cannot. This is my dog Rilee, and she helps to keep me somewhat sane during
+    pretty much anything.
+  </p>
+
+  <p>
+    There's not much to say about me other than what can be found around, on my
+    <a href="/blog">Blog</a>,
+    <a href="https://www.github.com/pyxxil">GitHub</a>/<a
+      href="https://www.gitlab.com/pyxxil">Gitlab</a>,
+      or <a
+      href="https://www.linkedin.com/in/josh-hill-b655131a1/">LinkedIn</a>. I'm just someone who enjoys solving problems, and
+    programming just so happens to be the tool with which I do so.
+  </p>
+
+  <p>
+    I'm currently employed as a Junior Software Developer, working on Robotic
+    Process Automation, Business Process Automation, and bits of other stuff
+    here and there such as deployment of processes, working on API's, etc.
+  </p>
+
+  <p>
+    Generally, I haven't ever stuck to one singular passion within programming.
+    I'll often swap around what I like to do, which may have lead me down to
+    almost being a "Jack of All Trades, Master of None", however I like to think
+    most of the stuff I have done has all lead to making me a better developer
+    in some way. I've spent the past few years working on several personal
+    projects, a few of which you can find amongst my
+    <a href="/projects">Projects</a> page on this website.
+  </p>
 </div>
 
 {% endblock %}
