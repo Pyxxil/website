@@ -14,34 +14,6 @@
 
     {% load static %}
 
-    <style>
-      @font-face {
-        font-family: "Roboto";
-        src: url("{% static 'admin/fonts/Roboto-Regular-webfont.woff' %}");
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Roboto";
-        font-weight: bold;
-        src: url("{% static 'admin/fonts/Roboto-Bold-webfont.woff' %}");
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Roboto";
-        font-weight: lighter;
-        src: url("{% static 'admin/fonts/Roboto-Light-webfont.woff' %}");
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "Roboto Mono";
-        src: url("{% static 'fonts/RobotoMono-Regular.ttf' %}");
-        font-display: swap;
-      }
-    </style>
-
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 
     <link
@@ -172,7 +144,7 @@
 
     <div class="pure-g">
       <span class="pure-u-1" style="height: 2em;"></span>
-      <span class="pure-u-md-1-24" ></span>
+      <span class="pure-u-md-1-24"></span>
       <div class="pure-u-md-22-24 pure-u-sm-1 pure-u-1 content-wrapper shadow">
         {% block content %}{% endblock %}
       </div>

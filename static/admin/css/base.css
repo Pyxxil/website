@@ -2,13 +2,11 @@
     DJANGO Admin styles
 */
 
-@import url(fonts.css);
-
 body {
     margin: 0;
     padding: 0;
-    font-size: 14px;
-    font-family: "Roboto","Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+    font-size: 16px;
+    font-family: "Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
     color: #333;
     background: #fff;
 }
@@ -252,7 +250,7 @@ td, th {
     border-bottom: 1px solid #eee;
     vertical-align: top;
     padding: 8px;
-    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    font-family: "Lucida Grande", Verdana, Arial, sans-serif;
 }
 
 th {
@@ -410,7 +408,7 @@ input, textarea, select, .form-row p, form .button {
     margin: 2px 0;
     padding: 2px 3px;
     vertical-align: middle;
-    font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    font-family: "Lucida Grande", Verdana, Arial, sans-serif;
     font-weight: normal;
     font-size: 13px;
 }
