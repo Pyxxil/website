@@ -34,13 +34,14 @@
       media="none"
       onload="if(media!='all')media='all'"
     />
-    <noscript
-      ><link
+    <noscript>
+      <link
         rel="stylesheet"
         href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
         integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ"
         crossorigin="anonymous"
-    /></noscript>
+      />
+    </noscript>
 
     <link
       rel="stylesheet"
@@ -48,11 +49,29 @@
       media="none"
       onload="if(media!='all')media='all'"
     />
-    <noscript
-      ><link
+    <noscript>
+      <link
         rel="stylesheet"
         href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css"
-    /></noscript>
+      />
+    </noscript>
+
+    <link
+      rel="preload"
+      href="https://unpkg.com/website-carbon-badges@^1/b.min.js"
+      media="none"
+      as="script"
+      onload="if(media!='all')media='all'"
+    />
+    <noscript>
+      <link
+        rel="preload"
+        href="https://unpkg.com/website-carbon-badges@^1/b.min.js"
+        media="none"
+        as="script"
+        onload="if(media!='all')media='all'"
+      />
+    </noscript>
 
     <link
       rel="apple-touch-icon"
@@ -78,16 +97,17 @@
     <div class="custom-wrapper pure-g shadow" id="menu">
       <div class="pure-u-1 pure-u-md-6-24">
         <div class="pure-menu">
-          <a href="/" class="pure-menu-heading custom-brand"
-            >Pyxxilated Studios</a
-          >
+          <a href="/" class="pure-menu-heading custom-brand">
+            Pyxxilated Studios
+          </a>
           <a
             href="#"
             aria-label="None"
             class="custom-toggle"
             id="toggle"
             style="height: 2.5em;"
-            ><s class="bar" ></s><s class="bar"></s>
+          >
+            <s class="bar"></s><s class="bar"></s>
           </a>
         </div>
       </div>
@@ -112,12 +132,13 @@
         <div class="pure-menu pure-menu-horizontal custom-menu-3">
           <ul class="pure-menu-list">
             <li class="pure-menu-item">
-              <a href="https://www.github.com/pyxxil" aria-label="Github"
-                ><img
+              <a href="https://www.github.com/pyxxil" aria-label="Github">
+                <img
                   class="menu-image"
                   src="{% static 'images/GitHub.svg' %}"
                   alt="Github"
-              /></a>
+                />
+              </a>
             </li>
             <li class="pure-menu-item">
               <a href="https://www.gitlab.com/pyxxil" aria-label="Gitlab"
@@ -155,6 +176,9 @@
     <div id="wcb" class="wcb carbonbadge wcb-d"></div>
 
     <script src="{% static 'js/main.js' %}"></script>
-    <script src="https://unpkg.com/website-carbon-badges@^1/b.min.js" defer></script>
+    <script
+      src="https://unpkg.com/website-carbon-badges@^1/b.min.js"
+      defer
+    ></script>
   </body>
 </html>
