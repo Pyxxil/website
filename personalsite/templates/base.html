@@ -14,7 +14,15 @@
 
     {% load static %}
 
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/styles.css' %}"
+      media="none"
+      onload="if(media!='all')media='all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    </noscript>
 
     <link
       rel="stylesheet"
@@ -22,9 +30,9 @@
       media="none"
       onload="if(media!='all')media='all'"
     />
-    <noscript
-      ><link rel="stylesheet" href="{% static 'css/code.css' %}"
-    /></noscript>
+    <noscript>
+      <link rel="stylesheet" href="{% static 'css/code.css' %}" />
+    </noscript>
 
     <link
       rel="stylesheet"
@@ -160,7 +168,7 @@
 
     <div id="wcb" class="wcb carbonbadge wcb-d"></div>
 
-    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/main.js' %}" defer></script>
     <script
       src="https://unpkg.com/website-carbon-badges@^1/b.min.js"
       defer
