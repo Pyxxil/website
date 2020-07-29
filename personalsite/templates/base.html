@@ -163,6 +163,10 @@
       </div>
     </div>
 
+    <div id="background">
+      <canvas id="bgCanvas"></canvas>
+    </div>
+
     <div class="pure-g">
       <span class="pure-u-1" style="height: 2em;"></span>
       <span class="pure-u-md-1-24"></span>
@@ -171,9 +175,13 @@
       </div>
       <span class="pure-u-md-1-24"></span>
       <span class="pure-u-1" style="height: 2em;"></span>
-    </div>
 
-    <div id="wcb" class="wcb carbonbadge wcb-d"></div>
+      <div
+        id="wcb"
+        class="wcb carbonbadge wcb-d"
+        style="z-index: 2; width: 100%; letter-spacing: 0;"
+      ></div>
+    </div>
 
     <script src="{% static 'js/main.js' %}" defer></script>
     <script
