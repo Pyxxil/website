@@ -42,7 +42,7 @@ deploy:
         ##
         ## Deploy to gitlab and to the server
         ##
-        - rsync -hrvz --delete -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" personalsitestatic requirements.txt gitlab@pyxxilated.studio:/var/www/pyxxilated.studio/
+        - rsync -hrvz --delete -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" personalsite static requirements.txt gitlab@pyxxilated.studio:/var/www/pyxxilated.studio/
     artifacts:
         paths:
             - public # mandatory, other folder won't work
