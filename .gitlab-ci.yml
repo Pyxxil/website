@@ -43,13 +43,6 @@ deploy:
         ## Deploy to gitlab and to the server
         ##
         - rsync -hrvz --delete -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" personalsite static requirements.txt gitlab@pyxxilated.studio:/var/www/pyxxilated.studio/
-    artifacts:
-        paths:
-            - public # mandatory, other folder won't work
-    cache:
-        key: ${CI_PROJECT_ID}
-        paths:
-            - node_modules
     environment:
         name: staging
         url: https://www.pyxxilated.studio
