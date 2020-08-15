@@ -1,10 +1,15 @@
 {% extends "base.html" %} {% block content %} {% load martortags %}
 
-<div class="content">
-  <article>
-    <h1>{{ post.title }}</h1>
+<div class="title-background">
+  <div class="caption">
+    <span class="title">{{ post.title }}</span>
+  </div>
+</div>
+
+<main class="content-wrapper">
+  <article class="content shadow rounded">
     {{ post.body|safe_markdown }}
   </article>
-</div>
+</main>
 
 {% endblock %}
