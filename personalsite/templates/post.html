@@ -1,4 +1,15 @@
-{% extends "base.html" %} {% block content %} {% load martortags %}
+{% extends "base.html" %} {% block codestyling %}
+{% load static %}
+<link
+  rel="stylesheet"
+  href="{% static 'css/code.css' %}"
+  media="none"
+  onload="if(media!='all')media='all'"
+/>
+<noscript>
+  <link rel="stylesheet" href="{% static 'css/code.css' %}" />
+</noscript>
+{% endblock %} {% block content %} {% load martortags %}
 
 <div class="title-background">
   <div class="caption">
