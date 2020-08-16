@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from django.views.generic import ListView
+from django.views.generic import ListView, TemplateView
 
 from . import views
 from .models import Post
@@ -29,7 +29,8 @@ urlpatterns = [
     path('blog/<int:id>', views.post, name='post'),
     path('about', views.about, name='about'),
     path('projects', views.projects, name='projects'),
-    path('martor/', include('martor.urls'))
+    path('martor/', include('martor.urls')),
+    path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
