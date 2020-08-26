@@ -13,6 +13,9 @@
 
     {% load static %}
 
+    <link rel="preconnect" href="{% static '/' %}" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://unpkg.com" crossorigin="anonymous" />
+
     <link
       rel="stylesheet"
       href="{% static 'css/styles.css' %}"
@@ -81,7 +84,7 @@
     <link rel="manifest" href="{% static 'site.webmanifest' %}" />
   </head>
 
-  <body style="margin: 0;">
+  <body style="margin: 0">
     <div class="custom-wrapper pure-g shadow" id="menu">
       <div class="pure-u-1 pure-u-md-1-5">
         <div class="pure-menu">
@@ -93,7 +96,7 @@
             aria-label="None"
             class="custom-toggle"
             id="toggle"
-            style="height: 2.5em;"
+            style="height: 2.5em"
           >
             <s class="bar"></s><s class="bar"></s>
           </a>
@@ -164,7 +167,7 @@
               >
                 <svg
                   class="menu-image"
-                  style="enable-background: new 0 0 67 67;"
+                  style="enable-background: new 0 0 67 67"
                   version="1.1"
                   viewBox="0 0 67 67"
                   xml:space="preserve"
@@ -190,7 +193,7 @@
       <div
         id="wcb"
         class="wcb carbonbadge wcb-d"
-        style="z-index: 2; width: 100%; letter-spacing: 0;"
+        style="z-index: 2; width: 100%; letter-spacing: 0"
       >
         <div id="wcb_p">
           <p id="wcb_g">Measuring CO<sub>2</sub>&hellip;</p>
