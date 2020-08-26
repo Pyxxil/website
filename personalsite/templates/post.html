@@ -1,5 +1,4 @@
-{% extends "base.html" %} {% block codestyling %}
-{% load static %}
+{% extends "base.html" %} {% block codestyling %} {% load static %}
 <link
   rel="stylesheet"
   href="{% static 'css/code.css' %}"
@@ -18,7 +17,7 @@
 </div>
 
 <main class="content-wrapper">
-  <article class="content shadow rounded">
+  <article class="content-title shadow rounded">
     {{ post.body|safe_markdown }}
   </article>
 </main>

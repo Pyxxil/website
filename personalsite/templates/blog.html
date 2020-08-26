@@ -7,20 +7,20 @@
 </div>
 
 <main class="content-wrapper">
-  <div class="content shadow rounded">
+  <div class="content-title shadow rounded">
     {% for post in page.object_list %}
-    <div class="blog-post" style="margin: 2em 0;">
-      <h3 style="margin-bottom: 0;">
+    <div class="blog-post" style="margin: 2em 0">
+      <h3 style="margin-bottom: 0">
         <a href="/blog/{{ post.id }}">{{ post.title }}</a>
       </h3>
-      <span style="font-style: italic;">
+      <span style="font-style: italic">
         Reading time (mins): {{ post.reading_time }}
       </span>
       {{ post.summary|safe_markdown }}
     </div>
     {% endfor %}
 
-    <div style="display: flex; justify-content: center;">
+    <div style="display: flex; justify-content: center">
       {% if page.has_previous %}
       <a
         href="/blog?1"

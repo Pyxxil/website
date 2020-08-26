@@ -6,13 +6,24 @@
   </div>
 </div>
 
-<main class="content-grid">
+<main class="content-wrapper">
+  <div class="content-title shadow rounded">
+    <p>
+      I often have a few projects being worked on at any one time, and several
+      of them are web-based. This website has allowed me to host many of these
+      rather simply, and you can find several of these below.
+    </p>
+    <p>
+      Some of the projects below are not web based, but you'll still find them
+      below. If you want to see what I am working on, click on either the
+      GitHub/Gitlab links in the header above, or any of the links below.
+    </p>
+  </div>
+
   {% for project in projects %}
   <div class="content shadow rounded">
     <a href="{{ project.link }}">
-      <h3 style="text-align: unset; padding: 0;">
-        {{ project.title }}
-      </h3>
+      <h3 style="text-align: unset; padding: 0">{{ project.title }}</h3>
     </a>
     {{ project.description|safe_markdown }}
   </div>
