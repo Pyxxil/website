@@ -39,4 +39,4 @@ jobs:
           chmod 600 ~/.ssh/key
 
       - name: Deploy
-        run: rsync -hrvz --delete -e "ssh -i ~/.ssh/key -o StrictHostKeyChecking=no" personalsite static requirements.txt gitlab@${{ secrets.SERVER_IP }}:/var/www/pyxxilated.studio/
+        run: rsync -hrvz --update -e "ssh -i ~/.ssh/key -o StrictHostKeyChecking=no" personalsite static requirements.txt gitlab@${{ secrets.SERVER_IP }}:/var/www/pyxxilated.studio/
