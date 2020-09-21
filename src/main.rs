@@ -128,7 +128,7 @@ fn internal_error(req: &Request) -> Template {
 
 fn main() {
     rocket::ignite()
-        .mount("/", routes![index, about, static_asset, projects_page, blog, post, robots])
+        .mount("/", routes![index, about, static_asset, projects_page, blog, post])
         .attach(Template::fairing())
         .attach(AdHoc::on_attach("Assets Config", |rocket| {
             let assets_dir = rocket.config()
