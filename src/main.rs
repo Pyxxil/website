@@ -90,7 +90,6 @@ fn post(post_id: i32, static_url: State<StaticURL>, database: DatabaseConnection
     use schema::posts::dsl::*;
 
     let _post = posts.filter(id.eq(post_id)).load::<models::Post>(&database.0).expect("Error Getting Posts");
-    println!("Post: {:#?}", _post); 
     let context = PostContext { _static: &static_url.0, post: _post.first().unwrap() };
 
     Template::render("post", &context)
@@ -99,7 +98,7 @@ fn post(post_id: i32, static_url: State<StaticURL>, database: DatabaseConnection
 #[get("/about")]
 fn about(static_url: State<StaticURL>) -> Template {
     let mut context = HashMap::new();
-    context.insert("static", &static_url.0);
+    context.insert("_static", &static_url.0);
 
     Template::render("about", &context)
 }
@@ -129,7 +128,7 @@ fn internal_error(req: &Request) -> Template {
 
 fn main() {
     rocket::ignite()
-        .mount("/", routes![index, about, static_asset, projects_page, blog, post])
+        .mount("/", routes![index, about, static_asset, projects_page, blog, post, robots])
         .attach(Template::fairing())
         .attach(AdHoc::on_attach("Assets Config", |rocket| {
             let assets_dir = rocket.config()
