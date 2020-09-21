@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% block content %} {% load martortags %}
+{% extends "base" %} {% block content %}
 
 <div class="title-background">
   <div class="caption">
@@ -8,7 +8,7 @@
 
 <main class="content-wrapper">
   <div class="content-title shadow rounded">
-    {% for post in page.object_list %}
+    {% for post in posts %}
     <div class="blog-post" style="margin: 2em 0">
       <h3 style="margin-bottom: 0">
         <a href="/blog/{{ post.id }}">{{ post.title }}</a>
@@ -16,14 +16,14 @@
       <span style="font-style: italic">
         Reading time (mins): {{ post.reading_time }}
       </span>
-      {{ post.summary|safe_markdown }}
+      {{ post.summary }}
     </div>
     {% endfor %}
 
     <div style="display: flex; justify-content: center">
       {% if page.has_previous %}
       <a
-        href="/blog?1"
+        href="{{ page.previous }}"
         class="pure-button"
         style="
           background-color: var(--secondary);
@@ -36,7 +36,7 @@
       </a>
       {% endif %} {% if page.has_next %}
       <a
-        href="/blog?2"
+        href="{{ page.next }}"
         class="pure-button"
         style="
           background-color: var(--secondary);

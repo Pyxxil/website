@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% block content %} {% load martortags %}
+{% extends "base" %} {% block content %}
 
 <div class="title-background">
   <div class="caption">
@@ -25,7 +25,7 @@
     <a href="{{ project.link }}">
       <h3 style="text-align: unset; padding: 0">{{ project.title }}</h3>
     </a>
-    {{ project.description|safe_markdown }}
+    {{ project.description | safe }}
   </div>
   {% endfor %}
 </main>

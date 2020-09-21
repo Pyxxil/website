@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base" %} {% block content %}
 
 <div class="content">
   <h1> Well, I guess I haven't learned as much as I'd like to have... </h1>
