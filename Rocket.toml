@@ -1,8 +1,0 @@
-[global.databases]
-database = { url = "db.sqlite" }
-
-[development]
-static_url = "/static"
-
-[production]
-static_url = "https://static.pyxxilated.studio"
