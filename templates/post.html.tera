@@ -1,12 +1,12 @@
 {% extends "base" %} {% block codestyling %}
 <link
   rel="stylesheet"
-  href="{{ _static }}/css/code.css"
+  href="{{ static_url }}/css/code.css"
   media="none"
   onload="if(media!='all')media='all'"
 />
 <noscript>
-  <link rel="stylesheet" href="{{ _static }}/css/code.css" />
+  <link rel="stylesheet" href="{{ static_url }}/css/code.css" />
 </noscript>
 {% endblock %} {% block content %}
 

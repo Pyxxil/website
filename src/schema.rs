@@ -18,7 +18,4 @@ table! {
     }
 }
 
-allow_tables_to_appear_in_same_query!(
-    posts,
-    projects,
-);
+allow_tables_to_appear_in_same_query!(posts, projects,);

@@ -1,7 +1,15 @@
 {% extends "base" %} {% block content %}
 
-<div class="content">
-  <h1>That was not the page you were looking for</h1>
+<div class="title-background">
+  <div class="caption">
+    <span class="title">Page Not Found</span>
+  </div>
 </div>
+
+<main class="content-wrapper">
+  <div class="content-title shadow rounded">
+    <h1>That was not the page you were looking for</h1>
+  </div>
+</main>
 
 {% endblock %}

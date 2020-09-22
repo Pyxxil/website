@@ -9,7 +9,7 @@
 <main class="content-wrapper">
   <div class="content-title shadow rounded">
     <img
-      src="{{ _static }}/images/Rilee.webp"
+      src="{{ static_url }}/images/Rilee.webp"
       alt="Rilee"
       style="border-radius: .5em; float: left; margin: 0 1em 1em 0; width: 10em; height: 10em;"
       class="pure-image"

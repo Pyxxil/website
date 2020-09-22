@@ -1,14 +1,22 @@
 {% extends "base" %} {% block content %}
 
-<div class="content">
-  <h1> Well, I guess I haven't learned as much as I'd like to have... </h1>
-
-  Sorry about that, I'm still learning as much as I can about this so you'll just have
-  to be a little patient.
-
-  <br />
-  <br />
-  In the meantime click <a href="/">here</a> to go back to something that should hopefully work.
+<div class="title-background">
+  <div class="caption">
+    <span class="title">Internal Server Error</span>
+  </div>
 </div>
+
+<main class="content-wrapper">
+  <div class="content-title shadow rounded">
+    <h1> Well, I guess I haven't learned as much as I'd like to have... </h1>
+
+    Sorry about that, I'm still learning as much as I can about this so you'll just have
+    to be a little patient.
+
+    <br />
+    <br />
+    In the meantime click <a href="/">here</a> to go back to something that should hopefully work.
+  </div>
+</main>
 
 {% endblock %}
