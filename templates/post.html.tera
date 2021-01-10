@@ -1,4 +1,4 @@
-{% extends "base" %} {% block codestyling %}
+{% extends "base" %} {% block styling %}
 <link
   rel="stylesheet"
   href="{{ static_url }}/css/code.css"
@@ -8,18 +8,11 @@
 <noscript>
   <link rel="stylesheet" href="{{ static_url }}/css/code.css" />
 </noscript>
+{% endblock %} {% block title %}
+<h1 class="title">{{ post.title }}</h1>
 {% endblock %} {% block content %}
-
-<div class="title-background">
-  <div class="caption">
-    <span class="title">{{ post.title }}</span>
-  </div>
-</div>
-
-<main class="content-wrapper">
-  <article class="content-title shadow rounded">
-    {{ post.body | safe }}
-  </article>
-</main>
+<article>
+  {{ post.body | safe }}
+</article>
 
 {% endblock %}

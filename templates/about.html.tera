@@ -1,80 +1,74 @@
-{% extends "base" %} {% block content %}
+{% extends "base" %}
 
-<div class="title-background">
-  <div class="caption">
-    <span class="title">About</span>
-  </div>
-</div>
+{% block title %}
+<h1 class="title">About</h1>
+{% endblock %}
 
-<main class="content-wrapper">
-  <div class="content-title shadow rounded">
-    <img
-      src="{{ static_url }}/images/Rilee.webp"
-      alt="Rilee"
-      style="border-radius: .5em; float: left; margin: 0 1em 1em 0; width: 10em; height: 10em;"
-      class="pure-image"
-    />
+{% block content %}
+<img
+  src="{{ static_url }}/images/Rilee.webp"
+  alt="Rilee"
+  style="border-radius: .5em; float: left; margin: 0 1em 1em 0; width: 10em; height: 10em;"
+  class="pure-image"
+/>
 
-    <p style="margin-top: -.25em">
-      As much as I would like to claim that the picture on the left is of me, I
-      cannot. This is my dog Rilee, and she helps to keep me somewhat sane during
-      pretty much anything.
-    </p>
+<p style="margin-top: -.25em">
+  As much as I would like to claim that the picture on the left is of me, I
+  cannot. This is my dog Rilee, and she helps to keep me somewhat sane during
+  pretty much anything.
+</p>
 
-    <p>
-      There's not much to say about me other than what can be found around, on my
-      <a href="/blog">Blog</a>,
-      <a href="https://www.github.com/pyxxil">GitHub</a>/
-      <a href="https://www.gitlab.com/pyxxil">Gitlab</a>, or
-      <a href="https://www.linkedin.com/in/pyxxil">LinkedIn</a>. I'm
-      just someone who enjoys solving problems, and programming just so happens to
-      be the tool with which I do so.
-    </p>
+<p>
+  There's not much to say about me other than what can be found around, on my
+  <a href="/blog">Blog</a>,
+  <a href="https://www.github.com/pyxxil">GitHub</a>/
+  <a href="https://www.gitlab.com/pyxxil">Gitlab</a>, or
+  <a href="https://www.linkedin.com/in/pyxxil">LinkedIn</a>. I'm
+  just someone who enjoys solving problems, and programming just so happens to
+  be the tool with which I do so.
+</p>
 
-    <p>
-      Generally, I haven't ever stuck to one singular passion within programming.
-      I'll often swap around what I like to do, which may have lead me down to
-      almost being a "Jack of All Trades, Master of None", however I like to think
-      most of the stuff I have done has all lead to making me a better developer
-      in some way. I've spent the past few years working on several personal
-      projects, a few of which you can find amongst my
-      <a href="/projects">Projects</a> page on this website.
-    </p>
+<p>
+  Generally, I haven't ever stuck to one singular passion within programming.
+  I'll often swap around what I like to do, which may have lead me down to
+  almost being a "Jack of All Trades, Master of None", however I like to think
+  most of the stuff I have done has all lead to making me a better developer
+  in some way. I've spent the past few years working on several personal
+  projects, a few of which you can find amongst my
+  <a href="/projects">Projects</a> page on this website.
+</p>
 
-    <p>
-      I'm currently employed as a Junior Software Developer, working on Robotic
-      Process Automation, Business Process Automation, and bits and bobs of several
-      other things. The tech stack involved is ever changing, but it mostly revolves
-      around the following:
-      <ul>
-        <li class="about-item">Java</li>
-        <li class="about-item">Groovy</li>
-        <li class="about-item">Python</li>
-        <li class="about-item">JavaScript/TypeScript</li>
-        <li class="about-item">Angular</li>
-        <li class="about-item">BonitaSoft</li>
-        <li class="about-item">UiPath</li>
-        <li class="about-item">Bash</li>
-        <li class="about-item">git</li>
-      </ul>
-    </p>
+<p>
+  I'm currently employed as a Junior Software Developer, working on Robotic
+  Process Automation, Business Process Automation, and bits and bobs of several
+  other things. The tech stack involved is ever changing, but it mostly revolves
+  around the following:
+  <ul>
+    <li class="about-item">Java</li>
+    <li class="about-item">Groovy</li>
+    <li class="about-item">Python</li>
+    <li class="about-item">JavaScript/TypeScript</li>
+    <li class="about-item">Angular</li>
+    <li class="about-item">BonitaSoft</li>
+    <li class="about-item">UiPath</li>
+    <li class="about-item">Bash</li>
+    <li class="about-item">git</li>
+  </ul>
+</p>
 
-    <p>
-      In my own time, with the aforementioned projects, I've built up some skill with
-      the following technologies (excluding the above):
-      <ul>
-        <li class="about-item">C</li>
-        <li class="about-item">C++</li>
-        <li class="about-item">C#</li>
-        <li class="about-item">Debugging (gdb, lldb, rubber duck, print)</li>
-        <li class="about-item">HTML/CSS</li>
-        <li class="about-item">Linux</li>
-        <li class="about-item">React</li>
-        <li class="about-item">Rust</li>
-        <li class="about-item">Valgrind</li>
-      </ul>
-    </p>
-  </div>
-</main>
-
+<p>
+  In my own time, with the aforementioned projects, I've built up some skill with
+  the following technologies (excluding the above):
+  <ul>
+    <li class="about-item">C</li>
+    <li class="about-item">C++</li>
+    <li class="about-item">C#</li>
+    <li class="about-item">Debugging (gdb, lldb, rubber duck, print)</li>
+    <li class="about-item">HTML/CSS</li>
+    <li class="about-item">Linux</li>
+    <li class="about-item">React</li>
+    <li class="about-item">Rust</li>
+    <li class="about-item">Valgrind</li>
+  </ul>
+</p>
 {% endblock %}
