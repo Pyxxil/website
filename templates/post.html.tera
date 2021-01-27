@@ -1,0 +1,25 @@
+{% extends "base" %} {% block codestyling %}
+<link
+  rel="stylesheet"
+  href="{{ static_url }}/css/code.css"
+  media="none"
+  onload="if(media!='all')media='all'"
+/>
+<noscript>
+  <link rel="stylesheet" href="{{ static_url }}/css/code.css" />
+</noscript>
+{% endblock %} {% block content %}
+
+<div class="title-background">
+  <div class="caption">
+    <span class="title">{{ post.title }}</span>
+  </div>
+</div>
+
+<main class="content-wrapper">
+  <article class="content-title shadow rounded">
+    {{ post.body | safe }}
+  </article>
+</main>
+
+{% endblock %}

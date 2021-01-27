@@ -1,0 +1,2 @@
+CREATE TABLE IF NOT EXISTS "projects" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "title" varchar(140) NOT NULL, "link" varchar(200) NOT NULL, "description" text NOT NULL);
+CREATE TABLE IF NOT EXISTS "posts" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "title" varchar(140) NOT NULL, "body" text NOT NULL, "date" datetime NOT NULL, "reading_time" integer NOT NULL, "summary" text NOT NULL);

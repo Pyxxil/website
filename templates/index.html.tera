@@ -1,0 +1,60 @@
+{% extends "base" %} {% block content %}
+
+<div class="title-background">
+  <div class="caption">
+    <span class="title">Pyxxilated Studios</span>
+  </div>
+</div>
+
+<div class="content-wrapper" style="min-width: 320px">
+  <div class="content-title shadow rounded">
+    <h2>Welcome to my website!</h2>
+
+    <p>
+      This website exists for several reasons, all of which I will lay out below. I hope you enjoy your stay!
+    </p>
+
+  </div>
+
+    <div class="content shadow rounded">
+      <h3 class="centered">To learn about Web Development</h3>
+
+      <p>
+        While web development has never been my forte, nor something I'm particularly interested in doing,
+        it has its purpose. While this website offers me many opportunities that I find a lot more pressing,
+        it would be a mistake to not actually enjoy the process, nor actually try my best to actually do it well.
+      </p>
+    </div>
+
+    <div class="content shadow rounded">
+      <h3 class="centered">To host some of my projects</h3>
+
+      <p>
+        This has become a lot more relevant to me now that I've spent a lot of time writing Typescript, and
+        dabbling a little with Web Assembly (via Rust and wasm-bindgen).
+      </p>
+    </div>
+
+    <div class="content shadow rounded">
+      <h3 class="centered">A place I could put some writings</h3>
+
+      <p>
+        This might not be as important to anyone else as it is to me, but writing has always been my way of
+        getting things off my mind and helping me explain things I've been thinking about.
+      </p>
+    </div>
+
+    <div class="content shadow rounded">
+      <h3 class="centered">To show off</h3>
+
+      <p>
+        One of the more semi-important reasons for making this website. I'm affored the opportunity to
+        present a lot of my projects in a nicer way than with a GitHub/GitLab repository. That is to say
+        that it allows me to provide my own flair and touch to the way they are presented, and hopefully
+        show a bit of myself along the way.
+      </p>
+    </div>
+
+</div>
+
+{% endblock %}
