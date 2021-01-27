@@ -12,7 +12,6 @@
     <meta name="theme-color" content="#110E19" />
 
     <link rel="preconnect" href="{{ static_url }}" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://unpkg.com" crossorigin="anonymous" />
 
     <link
       rel="stylesheet"
@@ -21,7 +20,7 @@
       onload="if(media!='all')media='all'"
     />
     <noscript>
-	    <link rel="stylesheet" href="{{ static_url }}/css/styles.css" />
+      <link rel="stylesheet" href="{{ static_url }}/css/styles.css" />
     </noscript>
 
     {% block codestyling %} {% endblock %}
@@ -156,7 +155,6 @@
     </div>
 
     <div class="pure-g">
-
       <div class="firefly"></div>
       <div class="firefly"></div>
       <div class="firefly"></div>
