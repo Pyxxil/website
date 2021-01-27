@@ -44,5 +44,5 @@ jobs:
       - name: Deploy
         run: |
           cargo build --release
-          rsync -hrvz --update -e "ssh -i ~/.ssh/key -o StrictHostKeyChecking=no" target/release/website gitlab@${{ secrets.SERVER_IP }}:/var/www/pyxxilated.studio
+          rsync -hrvz --update -e "ssh -i ~/.ssh/key -o StrictHostKeyChecking=no" target/release/website templates gitlab@${{ secrets.SERVER_IP }}:/var/www/pyxxilated.studio
           rsync -hrvz --update -e "ssh -i ~/.ssh/key -o StrictHostKeyChecking=no" static/* gitlab@${{ secrets.SERVER_IP }}:/var/www/static/
