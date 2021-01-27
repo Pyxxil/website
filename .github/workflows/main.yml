@@ -36,5 +36,13 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" >> ~/.ssh/key
           chmod 600 ~/.ssh/key
 
+      - name: Install rustup
+        run: |
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --profile minimal --default-toolchain nightly
+          source ~/.cargo/env
+
       - name: Deploy
-        run: rsync -hrvz --update -e "ssh -i ~/.ssh/key -o StrictHostKeyChecking=no" personalsite static requirements.txt gitlab@${{ secrets.SERVER_IP }}:/var/www/pyxxilated.studio/
+        run: |
+          cargo build --release
+          rsync -hrvz --update -e "ssh -i ~/.ssh/key -o StrictHostKeyChecking=no" target/release/website gitlab@${{ secrets.SERVER_IP }}:/var/www/pyxxilated.studio
+          rsync -hrvz --update -e "ssh -i ~/.ssh/key -o StrictHostKeyChecking=no" static/* gitlab@${{ secrets.SERVER_IP }}:/var/www/static/
