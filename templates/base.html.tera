@@ -65,13 +65,6 @@
           <s class="bar"></s><s class="bar"></s>
         </a>
 
-        <input
-          type="checkbox"
-          class="switch"
-          id="darkSwitch"
-          aria-label="Dark Mode Switch"
-        />
-
         <div class="brand-links">
           <ul>
             <li>
