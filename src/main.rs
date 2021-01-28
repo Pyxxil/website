@@ -9,10 +9,10 @@ extern crate diesel;
 
 use serde::Serialize;
 
-use rocket::State;
 use rocket::fairing::AdHoc;
-use rocket::response::NamedFile;
 use rocket::response::status::NotFound;
+use rocket::response::NamedFile;
+use rocket::State;
 use rocket_contrib::templates::Template;
 
 use diesel::prelude::*;
@@ -84,10 +84,7 @@ fn blog(
 ) -> Template {
     use schema::posts::dsl::{date, posts};
 
-    let page = match page {
-        Some(page) => page,
-        None => 0,
-    };
+    let page = page.unwrap_or(0);
 
     let all_posts = posts
         .order_by(date)
@@ -113,7 +110,11 @@ fn blog(
 }
 
 #[get("/blog/<post_id>")]
-fn post(post_id: i32, static_url: State<StaticURL>, database: DatabaseConnection) -> Result<Template, NotFound<String>> {
+fn post(
+    post_id: i32,
+    static_url: State<StaticURL>,
+    database: DatabaseConnection,
+) -> Result<Template, NotFound<String>> {
     use schema::posts::dsl::{id, posts};
 
     let all_posts = posts
@@ -171,7 +172,15 @@ fn main() {
     rocket::ignite()
         .mount(
             "/",
-            routes![index, about, static_asset, projects_page, blog, post, robots],
+            routes![
+                index,
+                about,
+                static_asset,
+                projects_page,
+                blog,
+                post,
+                robots
+            ],
         )
         .attach(Template::fairing())
         .attach(AdHoc::on_attach("Assets Config", |rocket| {
