@@ -1,7 +1,7 @@
 {% extends "base" %}
 
 {% block meta %}
-<meta name="description" content="This is where you can find out all there is to know about me (there's not much)" />
+<meta name="description" content="This is where you can find out all there is to know about my experience, both professionally and personally through projects" />
 
 <link rel="canonical" href="https://www.pyxxilated.studio/about">
 {% endblock %}

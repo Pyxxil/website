@@ -168,6 +168,11 @@ fn robots() -> Option<NamedFile> {
     NamedFile::open(Path::new("templates/robots.txt")).ok()
 }
 
+#[get("/sitemap.txt")]
+fn sitemap() -> Option<NamedFile> {
+    NamedFile::open(Path::new("templates/sitemap.txt")).ok()
+}
+
 fn main() {
     rocket::ignite()
         .mount(
@@ -179,7 +184,8 @@ fn main() {
                 projects_page,
                 blog,
                 post,
-                robots
+                robots,
+                sitemap
             ],
         )
         .attach(Template::fairing())
