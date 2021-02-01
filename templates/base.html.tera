@@ -52,7 +52,7 @@
     <link rel="manifest" href="{{ static_url }}/site.webmanifest" />
   </head>
 
-  <body data-theme="dark">
+  <body data-theme="dark" style="margin: 4em 0 0;">
     <header class="custom-wrapper shadow" id="menu">
       <nav>
         <a href="/" class="brand"> Pyxxilated Studios </a>
