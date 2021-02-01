@@ -1,7 +1,7 @@
 {% extends "base" %}
 
 {% block meta %}
-<meta name="description" content="Just a blog post of mine -- read at your own risk" />
+<meta name="description" content="Just a blog post of mine about '{{ post.title }}'. I take no responsibility for your regret upon reading it, but I hope you'll have learned something along the way" />
 
 <link rel="canonical" href="https://www.pyxxilated.studio/blog/{{ post.id }}">
 {% endblock %}

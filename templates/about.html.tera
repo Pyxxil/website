@@ -33,7 +33,7 @@
 </p>
 
 <p>
-  Generally, I haven't ever stuck to one singular passion within programming.
+  Generally, I haven't stuck to one singular passion within programming.
   I'll often swap around what I like to do, which may have lead me down to
   almost being a "Jack of All Trades, Master of None", however I like to think
   most of the stuff I have done has all lead to making me a better developer
@@ -42,37 +42,53 @@
   <a href="/projects">Projects</a> page on this website.
 </p>
 
+<br>
+
+<h2>Experience</h2>
 <p>
-  I'm currently employed as a Junior Software Developer, working on Robotic
-  Process Automation, Business Process Automation, and bits and bobs of several
-  other things. The tech stack involved is ever changing, but it mostly revolves
-  around the following:
+  I'm currently employed as Junior Fullstack Developer, working with Blockchain related tech, in an agile company.
+  Our tech stack involves:
+  <ul>
+    <li class="about-item">TypeScript/JavaScript (Frontend)</li>
+    <li class="about-item">React (Frontend)</li>
+    <li class="about-item">Rust (Backend)</li>
+    <li class="about-item">Azure (and other DevOps/SRE related activities)</li>
+    <li class="about-item">Bash/ZSH/Fish</li>
+    <li class="about-item">git</li>
+    <li class="about-item">Blockchain</li>
+  </ul>
+
+  However I've also worked with, among other things, the following:
   <ul>
     <li class="about-item">Java</li>
     <li class="about-item">Groovy</li>
     <li class="about-item">Python</li>
-    <li class="about-item">JavaScript/TypeScript</li>
     <li class="about-item">Angular</li>
-    <li class="about-item">BonitaSoft</li>
-    <li class="about-item">UiPath</li>
-    <li class="about-item">Bash</li>
-    <li class="about-item">git</li>
+    <li class="about-item">AWS</li>
+    <li class="about-item">BonitaSoft (Business Process Management)</li>
+    <li class="about-item">UiPath (Robotic Process Automation)</li>
+    <li class="about-item">C-ish style C++ (OOP was involved)</li>
+    <li class="about-item">SQL (MSSql, MySQL, SQLite)</li>
   </ul>
+
+  This has involved me doing Robotic Process Automation, Business Process Management, and optimisation of a two decade old C++ codebase. Perhaps I should just provide a link to my resume here &hellip;
 </p>
 
 <p>
   In my own time, with the aforementioned projects, I've built up some skill with
-  the following technologies (excluding the above):
+  the following technologies:
   <ul>
     <li class="about-item">C</li>
     <li class="about-item">C++</li>
     <li class="about-item">C#</li>
     <li class="about-item">Debugging (gdb, lldb, rubber duck, print)</li>
     <li class="about-item">HTML/CSS</li>
+    <li class="about-item">JavaScript/TypeScript</li>
     <li class="about-item">Linux</li>
     <li class="about-item">React</li>
     <li class="about-item">Rust</li>
     <li class="about-item">Valgrind</li>
+    <li class="about-item">And so much more &hellip;</li>
   </ul>
 </p>
 {% endblock %}

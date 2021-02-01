@@ -1,7 +1,7 @@
 {% extends "base" %}
 
 {% block meta %}
-<meta name="description" content="This is where I keep my thoughts about a whole bunch of stuff, sometimes it's useful information" />
+<meta name="description" content="This is where I keep my thoughts about a whole bunch of stuff, sometimes it's useful information, but I make no promises" />
 
 <link rel="canonical" href="https://www.pyxxilated.studio/blog">
 {% endblock %}
@@ -10,7 +10,8 @@
 <h1 class="title">Blog</h1>
 {% endblock %}
 
-{% block content %} {% for post in posts %}
+{% block content %}
+{% for post in posts %}
 <div class="blog-post">
   <h3>
     <a href="/blog/{{ post.id }}">{{ post.title }}</a>
