@@ -10,11 +10,11 @@
 <h1 class="title">Blog</h1>
 {% endblock %}
 
+{% block content %}
 <p>
   This is my blog, where I keep some thoughts, and also some project related writeups (hopefully), and the occassional tutorial on certain topics. While I don't promise that any of it will be useful, I do hope that at least one person will learn something amongst all of the seemingly random content that I hope to put out (eventually, when I have time).
 </p>
 
-{% block content %}
 {% for post in posts %}
 <div class="blog-post">
   <h3>
