@@ -1,41 +1,37 @@
-{% extends "base" %} {% block title %}
+{% extends "base" %}
+
+{% block meta %}
+<meta name="description" content="This is where I keep my thoughts about a whole bunch of stuff, sometimes it's useful information" />
+
+<link rel="canonical" href="https://www.pyxxilated.studio/blog">
+{% endblock %}
+
+{% block title %}
 <h1 class="title">Blog</h1>
-{% endblock %} {% block content %} {% for post in posts %}
-<div class="blog-post" style="margin: 2em 0">
-  <h3 style="margin-bottom: 0">
+{% endblock %}
+
+{% block content %} {% for post in posts %}
+<div class="blog-post">
+  <h3>
     <a href="/blog/{{ post.id }}">{{ post.title }}</a>
   </h3>
   <span style="font-style: italic">
     Reading time (mins): {{ post.reading_time }}
   </span>
-  {{ post.summary }}
+  <br>
+  <p>
+    {{ post.summary }}
+  </p>
 </div>
 {% endfor %}
 
-<div style="display: flex; justify-content: center">
+<div>
   {% if page.has_previous %}
-  <a
-    href="{{ page.previous }}"
-    class="pure-button"
-    style="
-      background-color: var(--secondary);
-      color: var(--background-colour);
-      margin-right: 1em;
-      width: 8em;
-    "
-  >
+  <a href="{{ page.previous }}">
     Previous
   </a>
   {% endif %} {% if page.has_next %}
-  <a
-    href="{{ page.next }}"
-    class="pure-button"
-    style="
-      background-color: var(--secondary);
-      color: var(--background-colour);
-      width: 8em;
-    "
-  >
+  <a href="{{ page.next }}">
     Next
   </a>
   {% endif %}

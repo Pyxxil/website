@@ -1,8 +1,11 @@
-{% extends "base" %} {% block title %}
-<h1 class="title">Welcome to <b>Pyxxilated Studios</b></h1>
-{% endblock %} {% block content %}
+{% extends "base" %}
 
-<div style="min-width: 320px">
+{% block title %}
+<h1 class="title">Welcome to <b>Pyxxilated Studios</b></h1>
+{% endblock %}
+
+{% block content %}
+<div>
   <h2 class="content-title">Hi, my name is Josh (aka Pyxxil)</h2>
 
   <h2 class="content-title">Welcome to my website!</h2>

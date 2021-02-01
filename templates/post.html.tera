@@ -1,4 +1,12 @@
-{% extends "base" %} {% block styling %}
+{% extends "base" %}
+
+{% block meta %}
+<meta name="description" content="Just a blog post of mine -- read at your own risk" />
+
+<link rel="canonical" href="https://www.pyxxilated.studio/blog/{{ post.id }}">
+{% endblock %}
+
+{% block styling %}
 <link
   rel="stylesheet"
   href="{{ static_url }}/css/code.css"
@@ -8,11 +16,12 @@
 <noscript>
   <link rel="stylesheet" href="{{ static_url }}/css/code.css" />
 </noscript>
-{% endblock %} {% block title %}
+{% endblock %}
+
+{% block title %}
 <h1 class="title">{{ post.title }}</h1>
 {% endblock %} {% block content %}
 <article>
   {{ post.body | safe }}
 </article>
-
 {% endblock %}

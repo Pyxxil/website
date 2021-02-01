@@ -1,5 +1,11 @@
 {% extends "base" %}
 
+{% block meta %}
+<meta name="description" content="This is where you can find out all there is to know about me (there's not much)" />
+
+<link rel="canonical" href="https://www.pyxxilated.studio/about">
+{% endblock %}
+
 {% block title %}
 <h1 class="title">About</h1>
 {% endblock %}
@@ -8,11 +14,9 @@
 <img
   src="{{ static_url }}/images/Rilee.webp"
   alt="Rilee"
-  style="border-radius: .5em; float: left; margin: 0 1em 1em 0; width: 10em; height: 10em;"
-  class="pure-image"
 />
 
-<p style="margin-top: -.25em">
+<p>
   As much as I would like to claim that the picture on the left is of me, I
   cannot. This is my dog Rilee, and she helps to keep me somewhat sane during
   pretty much anything.
