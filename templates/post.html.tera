@@ -1,6 +1,8 @@
 {% extends "base" %}
 
 {% block meta %}
+<title>{{ post.title }}</title>
+
 <meta name="description" content="Just a blog post of mine about '{{ post.title }}'. I take no responsibility for your regret upon reading it, but I hope you'll have learned something along the way" />
 
 <link rel="canonical" href="https://www.pyxxilated.studio/blog/{{ post.id }}">
@@ -10,12 +12,8 @@
 <link
   rel="stylesheet"
   href="{{ static_url }}/css/code.css"
-  media="none"
-  onload="if(media!='all')media='all'"
+  media="all"
 />
-<noscript>
-  <link rel="stylesheet" href="{{ static_url }}/css/code.css" />
-</noscript>
 {% endblock %}
 
 {% block title %}

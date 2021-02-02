@@ -1,6 +1,8 @@
 {% extends "base" %}
 
 {% block meta %}
+<title>Projects</title>
+
 <meta name="description" content="This is where I house a whole bunch of links to my own personal projects, some hosted here, or others just links to code or elsewhere" />
 
 <link rel="canonical" href="https://www.pyxxilated.studio/projects">
