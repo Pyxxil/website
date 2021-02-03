@@ -46,6 +46,8 @@
     <title>Pyxxilated Studios</title>
 
     <meta name="description" content="This is my personal website, a place where I host several of my own projects, as well as learn how to do a lot of networking stuff in general and play around" />
+
+    <link rel="canonical" href="https://www.pyxxilated.studio">
     {% endblock %}
   </head>
 
