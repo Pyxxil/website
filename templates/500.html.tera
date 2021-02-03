@@ -1,14 +1,10 @@
-{% extends "base" %} {% block content %}
+{% extends "base" %} {% block content %} {% block title %}
+<h1 class="title">Internal Server Error</h1>
+{% endblock %}
 
-<div class="title-background">
-  <div class="caption">
-    <span class="title">Internal Server Error</span>
-  </div>
-</div>
-
-<main class="content-wrapper">
-  <div class="content-title shadow rounded">
-    <h1>Well, I guess I haven't learned as much as I'd like to have...</h1>
+<main>
+  <div>
+    <h2>Well, I guess I haven't learned as much as I'd like to have...</h2>
 
     Sorry about that, I'm still learning as much as I can about this so you'll
     just have to be a little patient.

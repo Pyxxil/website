@@ -1,14 +1,10 @@
-{% extends "base" %} {% block content %}
+{% extends "base" %} {% block content %} {% block title %}
+<h1 class="title">Page Not Found</h1>
+{% endblock %}
 
-<div class="title-background">
-  <div class="caption">
-    <span class="title">Page Not Found</span>
-  </div>
-</div>
-
-<main class="content-wrapper">
-  <div class="content-title shadow rounded">
-    <h1>That was not the page you were looking for</h1>
+<main>
+  <div>
+    <h2>That was not the page you were looking for</h2>
   </div>
 </main>
 

@@ -2,16 +2,16 @@
 <h1 class="title">Welcome to <b>Pyxxilated Studios</b></h1>
 {% endblock %} {% block content %}
 <div>
-  <h2 class="content-title">Hi, my name is Josh (aka Pyxxil)</h2>
+  <h2>Hi, my name is Josh (aka Pyxxil)</h2>
 
-  <h2 class="content-title">Welcome to my website!</h2>
+  <h3>Welcome to my website!</h3>
 
   <p>
     This website exists for several reasons, all of which I will lay out below.
     I hope you enjoy your stay!
   </p>
 
-  <h3 class="centered">To learn about Web Development</h3>
+  <h3>To learn about Web Development</h3>
 
   <p>
     While web development has never been my forte, it is none the less something
@@ -23,7 +23,7 @@
     improve on.
   </p>
 
-  <h3 class="centered">To host some of my projects</h3>
+  <h3>To host some of my projects</h3>
 
   <p>
     I never originally enjoyed web development much, but it has grown on me now
@@ -32,7 +32,7 @@
     figure it out.
   </p>
 
-  <h3 class="centered">A place I could put some writings</h3>
+  <h3>A place I could put some writings</h3>
 
   <p>
     This might not be as important to anyone else as it is to me, but writing
@@ -41,7 +41,7 @@
     to write tutorials that others may find useful, or writeups of projects.
   </p>
 
-  <h3 class="centered">To 'show off'</h3>
+  <h3>To 'show off'</h3>
 
   <p>
     This may sound stupid, but I don't often show off anything I work on to
