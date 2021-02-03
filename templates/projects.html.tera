@@ -1,18 +1,15 @@
-{% extends "base" %}
-
-{% block meta %}
+{% extends "base" %} {% block meta %}
 <title>Projects</title>
 
-<meta name="description" content="This is where I house a whole bunch of links to my own personal projects, some hosted here, or others just links to code or elsewhere" />
+<meta
+  name="description"
+  content="This is where I house a whole bunch of links to my own personal projects, some hosted here, or others just links to code or elsewhere"
+/>
 
-<link rel="canonical" href="https://www.pyxxilated.studio/projects">
-{% endblock %}
-
-{% block title %}
+<link rel="canonical" href="https://www.pyxxilated.studio/projects" />
+{% endblock %} {% block title %}
 <h1 class="title">Projects</h1>
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 <div>
   <p>
     I often have a few projects being worked on at any one time, and several of
@@ -33,5 +30,4 @@
   </a>
   {{ project.description | safe }}
 </div>
-{% endfor %}
-{% endblock %}
+{% endfor %} {% endblock %}
