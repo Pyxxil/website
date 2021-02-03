@@ -90,7 +90,7 @@
     <li class="about-item">React</li>
     <li class="about-item">Rust</li>
     <li class="about-item">Valgrind</li>
-    <li class="about-item">And so much more &hellip;</li>
+    <li class="about-item">And more &hellip;</li>
   </ul>
 </p>
 {% endblock %}
