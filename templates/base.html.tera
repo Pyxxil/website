@@ -2,7 +2,7 @@
 
 <html lang="en">
   <head>
-    <link rel="canonical" href="https://www.pyxxilated.studio">
+    <meta charset="utf-8">
 
     <link rel="dns-prefetch" href="{{ static_url }}" crossorigin="anonymous" />
     <link rel="dns-prefetch" href="https://api.pyxxilated.studio" crossorigin="anonymous" />
