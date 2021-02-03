@@ -1,6 +1,8 @@
 {% extends "base" %}
 
 {% block meta %}
+<title>About</title>
+
 <meta name="description" content="This is where you can find out all there is to know about my experience, both professionally and personally through projects" />
 
 <link rel="canonical" href="https://www.pyxxilated.studio/about">
@@ -88,7 +90,7 @@
     <li class="about-item">React</li>
     <li class="about-item">Rust</li>
     <li class="about-item">Valgrind</li>
-    <li class="about-item">And so much more &hellip;</li>
+    <li class="about-item">And more &hellip;</li>
   </ul>
 </p>
 {% endblock %}

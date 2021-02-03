@@ -2,32 +2,16 @@
 
 <html lang="en">
   <head>
-    <title>Pyxxilated Studios</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="theme-color" content="#272635" />
-
-    {% block meta %}
-    <meta name="description" content="This is my personal website, a place where I host several of my own projects, as well as learn how to do a lot of networking stuff in general and play around" />
-
     <link rel="canonical" href="https://www.pyxxilated.studio">
-    {% endblock %}
 
-    <link rel="preconnect" href="{{ static_url }}" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://api.pyxxilated.studio" crossorigin="anonymous" />
+    <link rel="dns-prefetch" href="{{ static_url }}" crossorigin="anonymous" />
+    <link rel="dns-prefetch" href="https://api.pyxxilated.studio" crossorigin="anonymous" />
 
     <link
       rel="stylesheet"
       href="{{ static_url }}/css/styles.css"
-      media="none"
-      onload="if(media!='all')media='all'"
+      media="all"
     />
-    <noscript>
-      <link rel="stylesheet" href="{{ static_url }}/css/styles.css" />
-    </noscript>
 
     {% block styling %} {% endblock %}
 
@@ -50,12 +34,25 @@
     />
 
     <link rel="manifest" href="{{ static_url }}/site.webmanifest" />
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#272635" />
+
+    {% block meta %}
+    <title>Pyxxilated Studios</title>
+
+    <meta name="description" content="This is my personal website, a place where I host several of my own projects, as well as learn how to do a lot of networking stuff in general and play around" />
+    {% endblock %}
   </head>
 
-  <body data-theme="dark" style="margin: 4em 0 0;">
-    <header class="custom-wrapper shadow" id="menu">
+  <body>
+    <header id="menu">
       <nav>
-        <a href="/" class="brand"> Pyxxilated Studios </a>
+        <h2><a href="/" class="brand">Pyxxilated Studios</a></h2>
 
         <div class="brand-links">
           <ul>
