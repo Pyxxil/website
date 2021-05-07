@@ -9,24 +9,27 @@ extern crate diesel;
 
 use serde::Serialize;
 
-use rocket::fairing::AdHoc;
-use rocket::response::status::NotFound;
-use rocket::response::NamedFile;
-use rocket::State;
+use rocket::{
+    fairing::AdHoc,
+    response::{status::NotFound, NamedFile},
+    State,
+};
 use rocket_contrib::templates::Template;
 
 use diesel::prelude::*;
 
-use std::collections::HashMap;
-use std::path::{Path, PathBuf};
+use std::{
+    collections::HashMap,
+    path::{Path, PathBuf},
+};
 
 pub mod models;
 pub mod schema;
-use models::*;
+use models::{Post, Project};
 
 const POSTS_PER_PAGE: usize = 5;
 
-struct StaticURL(String);
+struct StaticUrl(String);
 #[database("database")]
 struct DatabaseConnection(diesel::SqliteConnection);
 
@@ -53,7 +56,7 @@ struct PostContext<'a> {
 }
 
 #[get("/")]
-fn index(static_url: State<StaticURL>) -> Template {
+fn index(static_url: State<StaticUrl>) -> Template {
     let mut context = HashMap::new();
     context.insert("static_url", &static_url.0);
 
@@ -61,8 +64,8 @@ fn index(static_url: State<StaticURL>) -> Template {
 }
 
 #[get("/projects")]
-fn projects_page(static_url: State<StaticURL>, database: DatabaseConnection) -> Template {
-    use schema::projects::dsl::*;
+fn projects_page(static_url: State<StaticUrl>, database: DatabaseConnection) -> Template {
+    use schema::projects::dsl::{projects, title};
 
     let projs = projects
         .order_by(title)
@@ -79,7 +82,7 @@ fn projects_page(static_url: State<StaticURL>, database: DatabaseConnection) -> 
 #[get("/blog?<page>")]
 fn blog(
     page: Option<usize>,
-    static_url: State<StaticURL>,
+    static_url: State<StaticUrl>,
     database: DatabaseConnection,
 ) -> Template {
     use schema::posts::dsl::{date, posts};
@@ -112,7 +115,7 @@ fn blog(
 #[get("/blog/<post_id>")]
 fn post(
     post_id: i32,
-    static_url: State<StaticURL>,
+    static_url: State<StaticUrl>,
     database: DatabaseConnection,
 ) -> Result<Template, NotFound<String>> {
     use schema::posts::dsl::{id, posts};
@@ -122,20 +125,22 @@ fn post(
         .load::<models::Post>(&database.0)
         .expect("Error Getting Posts");
 
-    if let Some(post) = all_posts.first() {
-        let context = PostContext {
-            static_url: &static_url.0,
-            post,
-        };
-
-        Ok(Template::render("post", &context))
-    } else {
-        Err(NotFound("Invalid Post ID".to_string()))
-    }
+    all_posts.first().map_or_else(
+        || Err(NotFound("Invalid Post ID".to_string())),
+        |post| {
+            Ok(Template::render(
+                "post",
+                &PostContext {
+                    static_url: &static_url.0,
+                    post,
+                },
+            ))
+        },
+    )
 }
 
 #[get("/about")]
-fn about(static_url: State<StaticURL>) -> Template {
+fn about(static_url: State<StaticUrl>) -> Template {
     let mut context = HashMap::new();
     context.insert("static_url", &static_url.0);
 
@@ -196,7 +201,7 @@ fn main() {
                 .unwrap_or("/static")
                 .to_string();
 
-            Ok(rocket.manage(StaticURL(assets_dir)))
+            Ok(rocket.manage(StaticUrl(assets_dir)))
         }))
         .attach(DatabaseConnection::fairing())
         .register(catchers![not_found, internal_error])

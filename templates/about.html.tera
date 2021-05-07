@@ -48,13 +48,15 @@
 
 <h2>Experience</h2>
 <p>
-  I'm currently employed as Junior Fullstack Developer, working with Blockchain related tech, in an agile company.
-  Our tech stack involves:
+  I'm currently employed as a Fullstack Developer at P^werFinance, a FinTech startup in Auckland.
+  Our tech stack is ever changing as we figure out the best way to do things, but in general it
+  involves the following:
+
   <ul>
-    <li class="about-item">TypeScript/JavaScript (Frontend)</li>
+    <li class="about-item">TypeScript/JavaScript (Frontend/Backend)</li>
     <li class="about-item">React (Frontend)</li>
-    <li class="about-item">Rust (Backend)</li>
-    <li class="about-item">Azure (and other DevOps/SRE related activities)</li>
+    <li class="about-item">Rust</li>
+    <li class="about-item">Azure</li>
     <li class="about-item">Bash/ZSH/Fish</li>
     <li class="about-item">git</li>
     <li class="about-item">Blockchain</li>
